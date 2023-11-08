@@ -1,0 +1,9 @@
+pushd ~/aarch64_docs
+fzf \
+--height 100% \
+--color header:italic \
+--header 'Press Enter to Open in evince' \
+--preview-window 'right:70%:nohidden' \
+--preview 'pdftotext -nopgbrk -layout -q -eol unix {} -' \
+--bind 'enter:become(evince {})'
+popd
